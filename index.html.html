@@ -1,0 +1,243 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BT Pharma</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f2f2f2;
+}
+
+header{
+    background:#0a7c86;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.product{
+    background:white;
+    width:260px;
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product img{
+    width:200px;
+}
+
+.price{
+    margin-top:10px;
+    font-size:16px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.factory{
+    color:#444;
+}
+
+.selling{
+    color:#0a7c86;
+}
+
+/* ===== Combined Logo Style ===== */
+
+.logo-combined{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.logo-combined img{
+    width:45px;
+    height:auto;
+    object-fit:contain;
+}
+
+/* POPUP STYLE */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+}
+
+.modal img{
+    display:block;
+    max-width:90%;
+    max-height:80%;
+    margin:60px auto;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>BT Pharma Products</h1>
+</header>
+
+<div class="container">
+
+<div class="product" onclick="openModal('bt1.webp')">
+<h3>Quick Sleep</h3>
+<img src="bt1.webp">
+<div class="price factory">
+Factory Price: 17,564 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>22,550 IQD</span>
+</div>
+</div>
+
+<div class="product" onclick="openModal('bt2.webp')">
+<h3>Gavera</h3>
+<img src="bt2.webp">
+<div class="price factory">
+Factory Price: 17,955 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>23,000 IQD</span>
+</div>
+</div>
+
+<div class="product" onclick="openModal('bt3.webp')">
+<h3>MagFort</h3>
+<img src="bt3.webp">
+<div class="price factory">
+Factory Price: 13,714 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>18,000 IQD</span>
+</div>
+</div>
+
+<div class="product" onclick="openModal('bt4.webp')">
+<h3>Vitamin D3</h3>
+<img src="bt4.webp">
+<div class="price factory">
+Factory Price: 6,275 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>8,500 IQD</span>
+</div>
+</div>
+
+<div class="product" onclick="openModal('bt5.webp')">
+<h3>Honix</h3>
+<img src="bt5.webp">
+<div class="price factory">
+Factory Price: 4,396 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-logo.png" alt="KMCA">
+</div>
+<span>6,000 IQD</span>
+</div>
+</div>
+
+<div class="product" onclick="openModal('bt6.jpeg')">
+<h3>MagCit</h3>
+<img src="bt6.jpeg">
+<div class="price factory">
+Factory Price: 5,861 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>8,000 IQD</span>
+</div>
+</div>
+
+</div>
+
+<!-- POPUP -->
+<div id="modal" class="modal" onclick="closeModal()">
+<span class="close">&times;</span>
+<img id="modalImg">
+</div>
+
+<footer>
+Brwa made this web – <span id="date"></span>
+</footer>
+
+<script>
+function openModal(src){
+    document.getElementById("modal").style.display="block";
+    document.getElementById("modalImg").src = src;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+</script>
+
+</body>
+</html>
