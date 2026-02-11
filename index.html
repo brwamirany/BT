@@ -31,10 +31,15 @@ header{
     width:260px;
     margin:15px;
     padding:15px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
     text-align:center;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
 }
 
 .product img{
@@ -43,16 +48,34 @@ header{
 
 .price{
     margin-top:10px;
-    font-size:18px;
+    font-size:16px;
     font-weight:bold;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:8px;
+    gap:10px;
 }
 
-.price img{
-    width:28px;
+.factory{
+    color:#444;
+}
+
+.selling{
+    color:#0a7c86;
+}
+
+/* ===== Combined Logo Style ===== */
+
+.logo-combined{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.logo-combined img{
+    width:45px;
+    height:auto;
+    object-fit:contain;
 }
 
 /* POPUP STYLE */
@@ -104,48 +127,90 @@ footer{
 <div class="product" onclick="openModal('bt1.webp')">
 <h3>Quick Sleep</h3>
 <img src="bt1.webp">
-<div class="price">
-<img src="kmca.jpg"> 22,500 IQD
+<div class="price factory">
+Factory Price: 17,564 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>22,550 IQD</span>
 </div>
 </div>
 
 <div class="product" onclick="openModal('bt2.webp')">
 <h3>Gavera</h3>
 <img src="bt2.webp">
-<div class="price">
-<img src="kmca.jpg"> 23,000 IQD
+<div class="price factory">
+Factory Price: 17,955 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>23,000 IQD</span>
 </div>
 </div>
 
 <div class="product" onclick="openModal('bt3.webp')">
 <h3>MagFort</h3>
 <img src="bt3.webp">
-<div class="price">
-<img src="kmca.jpg"> 18,000 IQD
+<div class="price factory">
+Factory Price: 13,714 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>18,000 IQD</span>
 </div>
 </div>
 
-<div class="product" onclick="openModal('bt4.jpg')">
+<div class="product" onclick="openModal('bt4.webp')">
 <h3>Vitamin D3</h3>
-<img src="bt4.jpg">
-<div class="price">
-<img src="kmca.jpg"> 8,500 IQD
+<img src="bt4.webp">
+<div class="price factory">
+Factory Price: 6,275 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>8,500 IQD</span>
 </div>
 </div>
 
-<div class="product" onclick="openModal('bt5.jpg')">
+<div class="product" onclick="openModal('bt5.webp')">
 <h3>Honix</h3>
-<img src="bt5.jpg">
-<div class="price">
-<img src="kmca.jpg"> 6,000 IQD
+<img src="bt5.webp">
+<div class="price factory">
+Factory Price: 4,396 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-logo.png" alt="KMCA">
+</div>
+<span>6,000 IQD</span>
 </div>
 </div>
 
 <div class="product" onclick="openModal('bt6.jpeg')">
 <h3>MagCit</h3>
 <img src="bt6.jpeg">
-<div class="price">
-<img src="kmca.jpg"> 8,000 IQD
+<div class="price factory">
+Factory Price: 5,861 IQD
+</div>
+<div class="price selling">
+<div class="logo-combined">
+<img src="k.png" alt="MOH">
+<img src="kmca-Logo.png" alt="KMCA">
+</div>
+<span>8,000 IQD</span>
 </div>
 </div>
 
@@ -171,10 +236,8 @@ function closeModal(){
     document.getElementById("modal").style.display="none";
 }
 
-// automatic today's date
 document.getElementById("date").innerHTML = new Date().toLocaleDateString();
 </script>
 
 </body>
-
 </html>
