@@ -10,13 +10,43 @@ body{
     background:#f2f2f2;
 }
 
+/* ===== HEADER ===== */
 header{
-    background:#0a7c86;
-    color:white;
-    text-align:center;
+    background:#ffffff;
     padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Logo + Text */
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.brand img{
+    width:55px;
+    height:auto;
+}
+
+.brand-name{
+    font-size:28px;
+    font-weight:bold;
+    margin:0;
+}
+
+.brand-name .bt{
+    color:#000000; /* Black */
+}
+
+.brand-name .pharma{
+    color:#a4b23f; /* Green */
+}
+
+/* ===== PRODUCTS ===== */
 .container{
     width:90%;
     margin:auto;
@@ -61,11 +91,10 @@ header{
 }
 
 .selling{
-    color:#0a7c86;
+    color:#a4b23f;
 }
 
-/* ===== Combined Logo Style ===== */
-
+/* Combined small logos */
 .logo-combined{
     display:flex;
     align-items:center;
@@ -78,7 +107,7 @@ header{
     object-fit:contain;
 }
 
-/* POPUP STYLE */
+/* ===== POPUP ===== */
 .modal{
     display:none;
     position:fixed;
@@ -106,6 +135,7 @@ header{
     cursor:pointer;
 }
 
+/* ===== FOOTER ===== */
 footer{
     background:#222;
     color:white;
@@ -119,7 +149,12 @@ footer{
 <body>
 
 <header>
-<h1>BT Pharma Products</h1>
+<div class="brand">
+<img src="btlogo.png" alt="BT Pharma Logo">
+<h1 class="brand-name">
+<span class="bt">BT</span> <span class="pharma">Pharma</span>
+</h1>
+</div>
 </header>
 
 <div class="container">
@@ -223,7 +258,7 @@ Factory Price: 5,861 IQD
 </div>
 
 <footer>
-Brwa made this web – <span id="date"></span>
+Designed And Developed By BrwaMirany
 </footer>
 
 <script>
@@ -235,11 +270,7 @@ function openModal(src){
 function closeModal(){
     document.getElementById("modal").style.display="none";
 }
-
-document.getElementById("date").innerHTML = new Date().toLocaleDateString();
 </script>
 
 </body>
 </html>
-
-
