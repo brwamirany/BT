@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <title>BT Pharma</title>
-<link rel="icon" href="log.ico" sizes="32x32" href="btlogo.png">
+<link rel="icon" href="log.ico" sizes="32x32">
 <style>
 body{
     font-family: Arial, sans-serif;
@@ -20,7 +20,6 @@ header{
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Logo + Text */
 .brand{
     display:flex;
     align-items:center;
@@ -39,11 +38,11 @@ header{
 }
 
 .brand-name .bt{
-    color:#000000; /* Black */
+    color:#000000;
 }
 
 .brand-name .pharma{
-    color:#a4b23f; /* Green */
+    color:#a4b23f;
 }
 
 /* ===== PRODUCTS ===== */
@@ -74,37 +73,6 @@ header{
 
 .product img{
     width:200px;
-}
-
-.price{
-    margin-top:10px;
-    font-size:16px;
-    font-weight:bold;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-}
-
-.factory{
-    color:#444;
-}
-
-.selling{
-    color:#a4b23f;
-}
-
-/* Combined small logos */
-.logo-combined{
-    display:flex;
-    align-items:center;
-    gap:5px;
-}
-
-.logo-combined img{
-    width:45px;
-    height:auto;
-    object-fit:contain;
 }
 
 /* ===== POPUP ===== */
@@ -162,91 +130,31 @@ footer{
 <div class="product" onclick="openModal('bt1.webp')">
 <h3>Quick Sleep</h3>
 <img src="bt1.webp">
-<div class="price factory">
-Factory Price: 17,564 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>22,550 IQD</span>
-</div>
 </div>
 
 <div class="product" onclick="openModal('bt2.webp')">
 <h3>Gavera</h3>
 <img src="bt2.webp">
-<div class="price factory">
-Factory Price: 17,955 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>23,000 IQD</span>
-</div>
 </div>
 
 <div class="product" onclick="openModal('bt3.webp')">
 <h3>MagFort</h3>
 <img src="bt3.webp">
-<div class="price factory">
-Factory Price: 13,714 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>18,000 IQD</span>
-</div>
 </div>
 
 <div class="product" onclick="openModal('bt4.webp')">
 <h3>Vitamin D3</h3>
 <img src="bt4.webp">
-<div class="price factory">
-Factory Price: 6,275 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>8,500 IQD</span>
-</div>
 </div>
 
 <div class="product" onclick="openModal('bt5.webp')">
 <h3>Honix</h3>
 <img src="bt5.webp">
-<div class="price factory">
-Factory Price: 4,396 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>6,000 IQD</span>
-</div>
 </div>
 
 <div class="product" onclick="openModal('bt6.jpeg')">
 <h3>MagCit</h3>
 <img src="bt6.jpeg">
-<div class="price factory">
-Factory Price: 5,861 IQD
-</div>
-<div class="price selling">
-<div class="logo-combined">
-<img src="k.png" alt="MOH">
-<img src="kmca.png" alt="KMCA">
-</div>
-<span>8,000 IQD</span>
-</div>
 </div>
 
 </div>
@@ -274,4 +182,3 @@ function closeModal(){
 
 </body>
 </html>
-
