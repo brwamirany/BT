@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>BT Pharma</title>
 <link rel="icon" href="log.ico" sizes="32x32">
+
 <style>
 body{
     font-family: Arial, sans-serif;
@@ -87,11 +89,24 @@ header{
     background:rgba(0,0,0,0.8);
 }
 
+.modal-content{
+    text-align:center;
+    color:white;
+    padding:40px 20px;
+}
+
 .modal img{
-    display:block;
     max-width:90%;
-    max-height:80%;
-    margin:60px auto;
+    max-height:60vh;
+    margin:auto;
+    display:block;
+}
+
+#modalText{
+    max-width:700px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.6;
 }
 
 .close{
@@ -127,32 +142,32 @@ footer{
 
 <div class="container">
 
-<div class="product" onclick="openModal('bt1.webp')">
+<div class="product" onclick="openModal('bt1.webp', ' یارمەتیدەرە بۆ ڕێکخستنی سووڕی سروشتیی خەو و هاندانی خەوێکی قووڵ و پشووبەخش. گونجاوە بۆ ئەو کەسانەی بەدەست بێخەوی یان ناڕێکیی کاتەکانی خەوەوە دەناڵێنن.')">
 <h3>Quick Sleep</h3>
 <img src="bt1.webp">
 </div>
 
-<div class="product" onclick="openModal('bt2.webp')">
+<div class="product" onclick="openModal('bt2.webp', ' پشتگیری لە تەندروستیی کۆئەندامی هەرس دەکات و یارمەتی کەمکردنەوەی ناڕەحەتییەکانی گەدە دەدات. بە پێکهاتەی چالاک و کوالێتی بەرز بەرهەم هێنراوە')">
 <h3>Gavera</h3>
 <img src="bt2.webp">
 </div>
 
-<div class="product" onclick="openModal('bt3.webp')">
+<div class="product" onclick="openModal('bt3.webp', ' تەواوکەرێکی خۆراکیی مەگنیسیۆمە، دیزاین کراوە بۆ پشتگیریکردنی فرمانی ماسولکەکان، کەمکردنەوەی گرژبوون (تەشنوج) و بەرزکردنەوەی ئاستی وزە')">
 <h3>MagFort</h3>
 <img src="bt3.webp">
 </div>
 
-<div class="product" onclick="openModal('bt4.webp')">
+<div class="product" onclick="openModal('bt4.webp', ' پشتگیری لە تەندروستیی کۆئەندامی بەرگری دەکات، ئێسکەکان بەهێز دەکات و یارمەتیدەرە بۆ پاراستنی مژینی گونجاوی کالسیۆم')">
 <h3>Vitamin D3</h3>
 <img src="bt4.webp">
 </div>
 
-<div class="product" onclick="openModal('bt5.webp')">
+<div class="product" onclick="openModal('bt5.webp', 'پێکهاتەیەکی سروشتییە کە یارمەتی بەهێزکردنی بەرگریی جەستە و چالاکیی گشتی دەدات، لە ڕێگەی بەکارهێنانی چەند پێکهاتەیەکی بەوردی هەڵبژێردراو')">
 <h3>Honix</h3>
 <img src="bt5.webp">
 </div>
 
-<div class="product" onclick="openModal('bt6.jpeg')">
+<div class="product" onclick="openModal('bt6.jpeg', ' مەگنیسیۆم سیتریت لەخۆدەگرێت بۆ پشتگیریکردنی فرمانی دەمارەکان، خاوکردنەوەی ماسولکەکان و تەندروستیی دڵ')">
 <h3>MagCit</h3>
 <img src="bt6.jpeg">
 </div>
@@ -160,9 +175,12 @@ footer{
 </div>
 
 <!-- POPUP -->
-<div id="modal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
+<div id="modal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<div class="modal-content">
 <img id="modalImg">
+<p id="modalText"></p>
+</div>
 </div>
 
 <footer>
@@ -170,9 +188,10 @@ Designed And Developed By BrwaMirany
 </footer>
 
 <script>
-function openModal(src){
+function openModal(src, description){
     document.getElementById("modal").style.display="block";
     document.getElementById("modalImg").src = src;
+    document.getElementById("modalText").innerText = description;
 }
 
 function closeModal(){
